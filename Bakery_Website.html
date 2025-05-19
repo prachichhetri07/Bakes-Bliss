@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <title>Bakes & Bliss Bakery</title>
+ 
+ 
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="#HOME">HOME</a></li>
+      <li><a href="#ABOUT">ABOUT</a></li>
+      <li><a href="#MENU">MENU</a></li>
+      <li><a href="#ORDER">ORDER</a></li>
+      <li><a href="#CONTACT">CONTACT</a></li>
+    </ul>
+  </nav>
+
+  <section id="HOME">
+    <h1>Bakes & Bliss</h1>
+    <a href="#ORDER" class="btn">ORDER NOW</a>
+    <p>
+      Step into a world where sweet dreams come true and every bite is a celebration of flavor and artistry.<br />
+      At Bliss & Bakes, we pour our passion into every creation,<br />
+      ensuring each cake is a masterpiece that tantalizes the taste buds and captivates the senses.<br />
+      Come experience the joy of indulgence with us, where every slice tells a story of deliciousness and delight.
+    </p>
+  </section>
+
+  <section id="ABOUT">
+    <h1>About Us</h1>
+    <h3>Why Choose Us?</h3>
+    <p>
+      At our cake bakery, we believe in crafting more than just desserts; we create experiences that linger in memory.
+      From the moment you step through our doors, you're enveloped in the aroma of freshly baked cakes, each one a testament to our dedication to quality and taste.
+      Our skilled bakers pour their passion into every confection, ensuring that each slice is a symphony of flavor and texture.
+      What sets us apart is not just our delectable treats, but our commitment to personalized service.
+      Choose us, and you're not just choosing a cake; you're choosing a moment of joy, shared with those you cherish, made sweeter by our artisanal craftsmanship.
+    </p>
+  </section>
+
+  <section id="MENU">
+    <h1>Our Menu</h1>
+    <div class="menu_box">
+      <!-- All menu items from your original list -->
+
+      <div class="menu_card">
+        <div class="menu_image"><img src="img/chocolate.png" alt="Chocolate cake" /></div>
+        <div class="menu_info">
+          <h2>Chocolate</h2>
+          <p>$18</p>
+          <button class="menu_btn" onclick="document.location='#ORDER';">Order</button>
+        </div>
+      </div>
+
+      <div class="menu_card">
+        <div class="menu_image"><img src="img/cheesecake.png"" alt="Classic Cheesecake" /></div>
+        <div class="menu_info">
+          <h2>Classic Cheesecake</h2>
+          <p>$20</p>
+          <button class="menu_btn" onclick="document.location='#ORDER';">Order</button>
+        </div>
+      </div>
+
+      <div class="menu_card">
+        <div class="menu_image"><img src="img/strawberry.png" alt="Strawberry" /></div>
+        <div class="menu_info">
+          <h2>Strawberry </h2>
+          <p>$19</p>
+          <button class="menu_btn" onclick="document.location='#ORDER';">Order</button>
+        </div>
+      </div>
+
+      <div class="menu_card">
+        <div class="menu_image"><img src="img/butterscotch.png" alt="butterscotch" /></div>
+        <div class="menu_info">
+          <h2>Butterscotch</h2>
+          <p>$17</p>
+          <button class="menu_btn" onclick="document.location='#ORDER';">Order</button>
+        </div>
+      </div>
+
+      <div class="menu_card">
+        <div class="menu_image"><img src="img/vanilla.png" alt="vanilla" /></div>
+        <div class="menu_info">
+          <h2>Vanilla</h2>
+          <p>$16</p>
+          <button class="menu_btn" onclick="document.location='#ORDER';">Order</button>
+        </div>
+      </div>
+
+      <div class="menu_card">
+        <div class="menu_image"><img src="img/cupcake.png" alt="cupcake" /></div>
+        <div class="menu_info">
+          <h2>Cupcake</h2>
+          <p>$14</p>
+          <button class="menu_btn" onclick="document.location='#ORDER';">Order</button>
+        </div>
+      </div>
+<div class="menu_card">
+        <div class="menu_image"><img src="img/doughnut.png" alt="doughnut" /></div>
+        <div class="menu_info">
+          <h2>Doughnut</h2>
+          <p>$10</p>
+          <button class="menu_btn" onclick="document.location='#ORDER';">Order</button>
+        </div>
+      </div>
+<div class="menu_card">
+        <div class="menu_image"><img src="img/customised.png" alt="customised" /></div>
+        <div class="menu_info">
+          <h2>Customised</h2>
+          <p>$20</p>
+          <button class="menu_btn" onclick="document.location='#ORDER';">Order</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ORDER">
+    <h1>Place Your Order</h1>
+    <div class="order_main">
+      <form id="orderForm" action="#" method="post" onsubmit="return validateOrder()">
+        <div class="input">
+          <p>Name:</p>
+          <input type="text" name="name" id="name" placeholder="Enter your full name" required />
+        </div>
+        <div class="input">
+          <p>Email:</p>
+          <input type="email" name="email" id="email" placeholder="Enter your email" required />
+        </div>
+        <div class="input">
+          <p>Phone Number:</p>
+          <input type="tel" name="phone" id="phone" placeholder="Enter your phone number" pattern="[0-9]{10}" required />
+        </div>
+        <div class="input">
+          <p>Select Cake:</p>
+          <select name="cake" id="cake" required>
+            <option value="" disabled selected>Select your cake</option>
+            <option value="Chocolate">Chocolate - $15</option>
+            <option value="Classic Cheesecake">Classic Cheesecake - $18</option>
+            <option value="Strawberry">Strawberry - $15</option>
+            <option value="Butterscotch">Butterscotch - $16</option>
+            <option value="Vanilla">Vanilla - $12</option>
+            <option value="Cupcake">Cupcake - $10</option>
+            <option value="Doughtnut">Doughtnut - $15</option>
+            <option value="Customised">Customised - $25</option>
+          </select>
+        </div>
+        <div class="input">
+          <p>Quantity:</p>
+          <input type="number" name="quantity" id="quantity" min="1" value="1" required />
+        </div>
+        <div class="input">
+          <p>Additional Notes for customs:</p>
+          <input type="text" name="notes" id="notes" placeholder="What you'd like to add?" />
+        </div>
+        <button class="order_btn" type="submit">Order Now</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="CONTACT">
+    <h1>Contact Us</h1>
+    <h3>Address: 123 Sweet Street, Bakersville</h3>
+    <h3>Phone: +1 (234) 567-8901</h3>
+    <h3>Email: support@bakesandbliss.com</h3>
+  </section>
+
+  <script>
+    // Simple client-side order validation & alert
+    function validateOrder() {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const cake = document.getElementById('cake').value;
+      const quantity = parseInt(document.getElementById('quantity').value);
+
+      if (!name || !email || !phone || !cake || !quantity || quantity < 1) {
+        alert('Please fill all required fields correctly.');
+        return false;
+      }
+
+      alert(`Thank you, ${name}! Your order for ${quantity} "${cake}" cake(s) has been received. We will contact you shortly.`);
+      return false; // prevent actual submission for demo
+    }
+  </script>
+
+</body>
+</html>

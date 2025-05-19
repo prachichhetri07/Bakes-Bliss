@@ -1,0 +1,324 @@
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: #fff8f0;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      width: 100%;
+      background: rgb(255, 255, 255);
+      padding: 1rem 3rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav ul li a {
+      font-weight: 600;
+      color: rgb(19, 19, 113);
+      font-size: 1rem;
+      padding: 0.3rem 0.5rem;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+
+    nav ul li a:hover,
+    nav ul li a:focus {
+      background: rgba(255, 255, 255, 0.3);
+      outline: none;
+    }
+
+    /* Banner (Home Section) */
+    #HOME {
+      height: 100vh;
+      position: relative;
+      background-image: url('img/b&b.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 0 1rem;
+    }
+
+    #HOME::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: 0;
+    }
+
+    #HOME > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    #HOME h1 {
+      font-size: 4rem;
+      font-weight: 900;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    }
+
+    #HOME .btn {
+      background: rgb(19, 19, 113);
+      padding: 0.8rem 2rem;
+      font-weight: 700;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(9, 1, 1, 0.649);
+      transition: background 0.3s ease;
+    }
+
+    #HOME .btn:hover {
+      background: rgba(135, 206, 235,0.766);
+    }
+
+    #HOME p {
+      max-width: 600px;
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      line-height: 1.5;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    /* About Section */
+    #ABOUT {
+      max-width: 900px;
+      margin: 5rem auto;
+      padding: 0 1rem;
+      text-align: center;
+    }
+
+    #ABOUT h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+      color: rgb(19, 19, 113);
+    }
+
+    #ABOUT h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: rgb(135, 206, 235);
+    }
+
+    #ABOUT p {
+      font-size: 1.1rem;
+      color: #444;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    /* Menu Section */
+    #MENU {
+      background: rgb(135, 206, 235);
+      padding: 3rem 1rem 5rem;
+      text-align: center;
+    }
+
+    #MENU h1 {
+      font-size: 2.8rem;
+      margin-bottom: 2rem;
+      color: rgb(19, 19, 113);
+      font-weight: 800;
+    }
+
+    .menu_box {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .menu_card {
+      background:rgb(255, 105, 153);
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(246, 143, 160, 0.666);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .menu_card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 24px palevioletred;
+    }
+
+    .menu_image img {
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
+      background: #fff8f0;
+      padding: 10px;
+    }
+
+    .menu_info {
+      padding: 1rem 1.5rem 2rem;
+    }
+
+    .menu_info h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.3rem;
+      color: #fff8f0;
+    }
+
+    .menu_info p {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+
+    .menu_btn {
+      background: rgb(135, 206, 235);
+      color: white;
+      padding: 0.6rem 1.5rem;
+      border: none;
+      border-radius: 25px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .menu_btn:hover {
+      background: palevioletred;
+    }
+
+    /* Order Section */
+    #ORDER {
+      max-width: 600px;
+      margin: 5rem auto 6rem;
+      padding: 0 1rem;
+    }
+
+    #ORDER h1 {
+      text-align: center;
+      font-size: 2.8rem;
+      margin-bottom: 2rem;
+      color: rgb(19, 19, 113);
+      font-weight: 800;
+    }
+
+    .order_main {
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgb(255 126 95 / 0.25);
+    }
+
+    form .input {
+      margin-bottom: 1.5rem;
+    }
+
+    form .input p {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #555;
+    }
+
+    form input, form select {
+      width: 100%;
+      padding: 0.7rem 1rem;
+      border: 2px solid rgb(19, 19, 113);
+      border-radius: 30px;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+
+    form input:focus, form select:focus {
+      border-color: rgb(135, 206, 235);
+    }
+
+    .order_btn {
+      width: 100%;
+      background: rgb(19, 19, 113);
+      border: none;
+      padding: 0.9rem 0;
+      font-weight: 700;
+      color: white;
+      font-size: 1.3rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .order_btn:hover {
+      background:rgb(135, 206, 235) ;
+    }
+
+    /* Contact Section */
+    #CONTACT {
+      background: rgb(19, 19, 113);
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    #CONTACT h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    #CONTACT h3 {
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 0.7rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      #HOME h1 {
+        font-size: 2.8rem;
+      }
+
+      nav ul {
+        gap: 1rem;
+      }
+
+      .menu_info h2 {
+        font-size: 1.2rem;
+      }
+
+      #ABOUT p {
+        font-size: 1rem;
+      }
+    }
